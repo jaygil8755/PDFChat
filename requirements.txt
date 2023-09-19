@@ -5,3 +5,4 @@ chromadb==0.3.29
 streamlit
 pypdf
 temp
+pysqlite3-binary
