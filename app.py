@@ -8,6 +8,7 @@ from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
+from langchain.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 
 from langchain.callbacks.base import BaseCallbackHandler
@@ -58,7 +59,8 @@ if uploaded_file is not None:
     embeddings_model = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 
 #4. 벡터DB에 로딩하기
-    db = Chroma.from_documents(texts, embeddings_model)
+    # db = Chroma.from_documents(texts, embeddings_model)
+    db = FAISS.from_documents(texts, embeddings_model)
 
 #5. 질문을 계속 받아줄 수 있는 핸들러 만들기
     class StreamHandler(BaseCallbackHandler):
