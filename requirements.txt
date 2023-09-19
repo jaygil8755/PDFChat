@@ -2,6 +2,7 @@ langchain
 openai
 tiktoken 
 chromadb
+faiss-cpu
 streamlit
 pypdf
 temp
