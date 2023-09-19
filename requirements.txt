@@ -6,4 +6,4 @@ faiss-cpu
 streamlit
 pypdf
 temp
-pysqlite3-binary
+
