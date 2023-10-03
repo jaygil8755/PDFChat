@@ -28,7 +28,7 @@ st.write("OenA API 키를 입력해주세요.")
 OPENAI_API_KEY = st.text_input('OPEN_AI_API_KEY', type='password')
 
 # 사용자로부터 PDF 파일을 받기
-uploaded_file = st.file_uploader("PDF 파일을 업로드하세요", accept_multiple_files=True)
+uploaded_file = st.file_uploader("PDF 파일을 업로드하세요")
 
 # 1. 파일을 페이지단위로 나눠 글자 추출하기
 def pdf_to_document (uploaded_file ):
